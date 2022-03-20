@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Boostrap CSS-->
+    <link rel="stylesheet" type="text/css" href="resources/bootstrap/css/bootstrap.min.css">
+
+    <!--Main CSS-->
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+
+    <title>Git Cheat Sheet</title>
+</head>
+<body>
+
+    <header>
+
+    </header>
+
+    <div>
+        <table>
+            <h3>STAGE & SNAPSHOT</h3>
+            <p>Working with snapshots and the Git staging area</p>
+            <tr><th>git status</th></tr>
+            <tr><td>show modified files in working directory, staged for your next commit</td></tr>
+            <tr><th>git add [file]</th></tr>
+            <tr><td>add a file as it looks now to your next commit (stage)</td></tr>
+            <tr><th>git reset [file]</th></tr>
+            <tr><td>unstage a file while retaining the changes in working directory</td></tr>
+            <tr><th>git diff</th></tr>
+            <tr><td>diff of what is changed but not staged</td></tr>
+            <tr><th>git diff --staged</th></tr>
+            <tr><td>diff of what is staged but not yet commited</td></tr>
+            <tr><th>git commit -m “[descriptive message]”</th></tr>
+            <tr><td>commit your staged content as a new commit snapshot</td></tr>
+        </table>
+    </div>
+
+    <div>
+        <h3>SETUP</h3>
+        <p>Configuring user information used across all local repositories</p>
+        <table>
+            <tr><th>git config --global user.name “[firstname lastname]”</th></tr>
+            <tr><td>set a name that is identifiable for credit when review version history</td></tr>
+            <tr><th>git config --global user.email “[valid-email]”</th></tr>
+            <tr><td>set an email address that will be associated with each history marker</td></tr>
+            <tr><th>git config --global color.ui auto</th></tr>
+            <tr><td>set automatic command line coloring for Git for easy reviewing</td></tr>
+        </table>
+    </div>
+
+    <div>
+        <h3>BRANCH & MERGE</h3>
+        <p>Isolating work in branches, changing context, and integrating changes</p>
+        <table>
+            <tr><th>git branch</th></tr>
+            <tr><td>list your branches. a * will appear next to the currently active branch</td></tr>
+            <tr><th>git branch [branch-name]</th></tr>
+            <tr><td>create a new branch at the current commit</td></tr>
+            <tr><th>git checkout</th></tr>
+            <tr><td>switch to another branch and check it out into your working directory</td></tr>
+            <tr><th>git merge [branch]</th></tr>
+            <tr><td>merge the specified branch’s history into the current one</td></tr>
+            <tr><th>git log</th></tr>
+            <tr><td>show all commits in the current branch’s history</td></tr>
+        </table>
+    </div>
+
+    <div>
+        <h3>SETUP & INIT</h3>
+        <p>Configuring user information, initializing and cloning repositories</p>
+        <table>
+            <tr><th>git init</th></tr>
+            <tr><td>initialize an existing directory as a Git repository</td></tr>
+            <tr><th>git clone [url]</th></tr>
+            <tr><td>retrieve an entire repository from a hosted location via URL</td></tr>
+        </table>
+    </div>
+
+    <div>
+        <h3>INSPECT & COMPARE</h3>
+        <p>Examining logs, diffs and object information</p>
+        <table>
+            <tr><th>git log</th></tr>
+            <tr><td>show the commit history for the currently active branch</td></tr>
+            <tr><th>git log branchB..branchA</th></tr>
+            <tr><td>show the commits on branchA that are not on branchB</td></tr>
+            <tr><th>git log --follow [file]</th></tr>
+            <tr><td>show the commits that changed file, even across renames</td></tr>
+            <tr><th>git diff branchB...branchA</th></tr>
+            <tr><td>show the diff of what is in branchA that is not in branchB</td></tr>
+            <tr><th>git show [SHA]</th></tr>
+            <tr><td>show any object in Git in human-readable format</td></tr>
+        </table>
+    </div>
+
+    <div>
+        <h3>SHARE & UPDATE</h3>
+        <p>Retrieving updates from another repository and updating local repos</p>
+        <table>
+            <tr><th>git remote add [alias] [url]</th></tr>
+            <tr><td>add a git URL as an alias</td></tr>
+            <tr><th>git fetch [alias]</th></tr>
+            <tr><td>fetch down all the branches from that Git remote</td></tr>
+            <tr><th>git merge [alias]/[branch]</th></tr>
+            <tr><td>merge a remote branch into your current branch to bring it up to date</td></tr>
+            <tr><th>git push [alias] [branch]</th></tr>
+            <tr><td>Transmit local branch commits to the remote repository branch</td></tr>
+            <tr><th>git pull</th></tr>
+            <tr><td>fetch and merge any commits from the tracking remote branch</td></tr>
+        </table>
+    </div>
+
+    <div>
+        <h3>TRACKING PATH CHANGES</h3>
+        <p>Versioning file removes and path changes</p>
+        <table>
+            <tr><th>git rm [file]</th></tr>
+            <tr><td>delete the file from project and stage the removal for commit</td></tr>
+            <tr><th>git mv [existing-path] [new-path]</th></tr>
+            <tr><td>change an existing file path and stage the move</td></tr>
+            <tr><th>git log --stat -M</th></tr>
+            <tr><td>show all commit logs with indication of any paths that moved </td></tr>
+        </table>
+    </div>
+
+    <div>
+        <h3>REWRITE HISTORY</h3>
+        <p>Rewriting branches, updating commits and clearing history</p>
+        <table>
+            <tr><th>git rebase [branch]</th></tr>
+            <tr><td>apply any commits of current branch ahead of specified one</td></tr>
+            <tr><th>git reset --hard [commit]</th></tr>
+            <tr><td>clear staging area, rewrite working tree from specified commit</td></tr>
+        </table>
+    </div>
+
+    <div>
+        <h3>IGNORING PATTERNS</h3>
+        <p>Preventing unintentional staging or commiting of files</p>
+        <table>
+            <tr><th>logs/
+                *.notes
+                pattern*/</th></tr>
+            <tr><td>Save a file with desired paterns as .gitignore with either direct string 
+                matches or wildcard globs.</td></tr>
+            <tr><th>git config --global core.excludesfile [file]</th></tr>
+            <tr><td>system wide ignore patern for all local repositories</td></tr>
+        </table>
+    </div>
+
+    <div>
+        <h3>TEMPORARY COMMITS</h3>
+        <p>Temporarily store modified, tracked files in order to change branches</p>
+        <table>
+            <tr><th>git stash</th></tr>
+            <tr><td>Save modified and staged changes</td></tr>
+            <tr><th>git stash list</th></tr>
+            <tr><td>list stack-order of stashed file changes</td></tr>
+            <tr><th>git stash pop</th></tr>
+            <tr><td>write working from top of stash stack</td></tr>
+            <tr><th>git stash drop</th></tr>
+            <tr><td>discard the changes from top of stash stack</td></tr>
+        </table>
+    </div>
+    
+</body>
+</html>
