@@ -15,21 +15,23 @@
 <body>
 
     <header id="front-page">
+        <div class="divider">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
         <div class="container">
             <div class="row">
                 <div class="col-md-12 ">
                     <h1>GitHub</h1>
-                    <h2>GIT CHEAT SHEET</h2>
-                    <p>Git is the free and open source distributed version control system that's responsible for everything GitHub 
-                        related that happens locally on your computer. This cheat sheet features the most important and commonly 
-                        used Git commands for easy reference.</p>
+                    <h2>Git Cheat Sheet</h2>
                 </div>
             </div>
         </div>
     </header>
 
 
-    <section class="container">
+    <section class="container" id="section1">
         <div class="row">
             <div class="col-md-6 col-sm-12">
                 <div class="box">
@@ -48,7 +50,7 @@
                     </p>
                 </div>
 
-                <div class="box">
+                <div class="box" id="setup-box">
                     <h3>SETUP</h3>
                     <p>Configuring user information used across all local repositories</p>
                     <table class="table table-striped">
@@ -76,11 +78,12 @@
 
             <div class="col-md-6 col-sm-12">
                 <div class="row">
-                    <div class="">
+                    <div class="col">
+
                         <div class="box">
+                            <h3>STAGE & SNAPSHOT</h3>
+                            <p>Working with snapshots and the Git staging area</p>
                             <table class="table table-striped">
-                                <h3>STAGE & SNAPSHOT</h3>
-                                <p>Working with snapshots and the Git staging area</p>
                                 <tr><th>git status</th></tr>
                                 <tr><td>show modified files in working directory, staged for your next commit</td></tr>
                                 <tr><th>git add [file]</th></tr>
@@ -95,33 +98,35 @@
                                 <tr><td>commit your staged content as a new commit snapshot</td></tr>
                             </table>
                         </div>
+                        
+    
+                        <div class="box">
+                            <h3>BRANCH & MERGE</h3>
+                            <p>Isolating work in branches, changing context, and integrating changes</p>
+                            <table class="table table-striped">
+                                <tr><th>git branch</th></tr>
+                                <tr><td>list your branches. a * will appear next to the currently active branch</td></tr>
+                                <tr><th>git branch [branch-name]</th></tr>
+                                <tr><td>create a new branch at the current commit</td></tr>
+                                <tr><th>git checkout</th></tr>
+                                <tr><td>switch to another branch and check it out into your working directory</td></tr>
+                                <tr><th>git merge [branch]</th></tr>
+                                <tr><td>merge the specified branch’s history into the current one</td></tr>
+                                <tr><th>git log</th></tr>
+                                <tr><td>show all commits in the current branch’s history</td></tr>
+                            </table>
+                        </div>
+    
                     </div>
-
-                    <div class="box">
-                        <h3>BRANCH & MERGE</h3>
-                        <p>Isolating work in branches, changing context, and integrating changes</p>
-                        <table class="table table-striped">
-                            <tr><th>git branch</th></tr>
-                            <tr><td>list your branches. a * will appear next to the currently active branch</td></tr>
-                            <tr><th>git branch [branch-name]</th></tr>
-                            <tr><td>create a new branch at the current commit</td></tr>
-                            <tr><th>git checkout</th></tr>
-                            <tr><td>switch to another branch and check it out into your working directory</td></tr>
-                            <tr><th>git merge [branch]</th></tr>
-                            <tr><td>merge the specified branch’s history into the current one</td></tr>
-                            <tr><th>git log</th></tr>
-                            <tr><td>show all commits in the current branch’s history</td></tr>
-                        </table>
-                    </div>
-
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="container">
+    <section class="container bg-image" id="section2">
         <div class="row">
             <div class="col-md-6 col-sm-12">
+
                 <div class="box">
                     <h3>INSPECT & COMPARE</h3>
                     <p>Examining logs, diffs and object information</p>
@@ -139,7 +144,7 @@
                     </table>
                 </div>
 
-                <div class="box">
+                <div class="box" id="tracking-box">
                     <h3>TRACKING PATH CHANGES</h3>
                     <p>Versioning file removes and path changes</p>
                     <table class="table table-striped">
@@ -169,48 +174,52 @@
 
             <div class="col col-md-6 col-sm-12">
                 <div class="row">
-                    <div class="box">
-                        <h3>SHARE & UPDATE</h3>
-                        <p>Retrieving updates from another repository and updating local repos</p>
-                        <table class="table table-striped">
-                            <tr><th>git remote add [alias] [url]</th></tr>
-                            <tr><td>add a git URL as an alias</td></tr>
-                            <tr><th>git fetch [alias]</th></tr>
-                            <tr><td>fetch down all the branches from that Git remote</td></tr>
-                            <tr><th>git merge [alias]/[branch]</th></tr>
-                            <tr><td>merge a remote branch into your current branch to bring it up to date</td></tr>
-                            <tr><th>git push [alias] [branch]</th></tr>
-                            <tr><td>Transmit local branch commits to the remote repository branch</td></tr>
-                            <tr><th>git pull</th></tr>
-                            <tr><td>fetch and merge any commits from the tracking remote branch</td></tr>
-                        </table>
-                    </div>
+                    <div class="col">
 
-                    <div class="box">
-                        <h3>REWRITE HISTORY</h3>
-                        <p>Rewriting branches, updating commits and clearing history</p>
-                        <table class="table table-striped">
-                            <tr><th>git rebase [branch]</th></tr>
-                            <tr><td>apply any commits of current branch ahead of specified one</td></tr>
-                            <tr><th>git reset --hard [commit]</th></tr>
-                            <tr><td>clear staging area, rewrite working tree from specified commit</td></tr>
-                        </table>
+                        <div class="box">
+                            <h3>SHARE & UPDATE</h3>
+                            <p>Retrieving updates from another repository and updating local repos</p>
+                            <table class="table table-striped">
+                                <tr><th>git remote add [alias] [url]</th></tr>
+                                <tr><td>add a git URL as an alias</td></tr>
+                                <tr><th>git fetch [alias]</th></tr>
+                                <tr><td>fetch down all the branches from that Git remote</td></tr>
+                                <tr><th>git merge [alias]/[branch]</th></tr>
+                                <tr><td>merge a remote branch into your current branch to bring it up to date</td></tr>
+                                <tr><th>git push [alias] [branch]</th></tr>
+                                <tr><td>Transmit local branch commits to the remote repository branch</td></tr>
+                                <tr><th>git pull</th></tr>
+                                <tr><td>fetch and merge any commits from the tracking remote branch</td></tr>
+                            </table>
+                        </div>
+    
+                        <div class="box">
+                            <h3>REWRITE HISTORY</h3>
+                            <p>Rewriting branches, updating commits and clearing history</p>
+                            <table class="table table-striped">
+                                <tr><th>git rebase [branch]</th></tr>
+                                <tr><td>apply any commits of current branch ahead of specified one</td></tr>
+                                <tr><th>git reset --hard [commit]</th></tr>
+                                <tr><td>clear staging area, rewrite working tree from specified commit</td></tr>
+                            </table>
+                        </div>
+    
+                        <div class="box">
+                            <h3>TEMPORARY COMMITS</h3>
+                            <p>Temporarily store modified, tracked files in order to change branches</p>
+                            <table class="table table-striped">
+                                <tr><th>git stash</th></tr>
+                                <tr><td>Save modified and staged changes</td></tr>
+                                <tr><th>git stash list</th></tr>
+                                <tr><td>list stack-order of stashed file changes</td></tr>
+                                <tr><th>git stash pop</th></tr>
+                                <tr><td>write working from top of stash stack</td></tr>
+                                <tr><th>git stash drop</th></tr>
+                                <tr><td>discard the changes from top of stash stack</td></tr>
+                            </table>
+                        </div>
                     </div>
-
-                    <div class="box">
-                        <h3>TEMPORARY COMMITS</h3>
-                        <p>Temporarily store modified, tracked files in order to change branches</p>
-                        <table class="table table-striped">
-                            <tr><th>git stash</th></tr>
-                            <tr><td>Save modified and staged changes</td></tr>
-                            <tr><th>git stash list</th></tr>
-                            <tr><td>list stack-order of stashed file changes</td></tr>
-                            <tr><th>git stash pop</th></tr>
-                            <tr><td>write working from top of stash stack</td></tr>
-                            <tr><th>git stash drop</th></tr>
-                            <tr><td>discard the changes from top of stash stack</td></tr>
-                        </table>
-                    </div>
+                    
                 </div>
             </div>
         </div>
