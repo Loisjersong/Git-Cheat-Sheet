@@ -1,11 +1,32 @@
 @font-face {
-    src: url(../fonts/Poppins/Poppins-Black.ttf);
-    font-family: customFont1;
+    src: url(../fonts/Pacifico/Pacifico-Regular.ttf);
+    font-family: Pacifico;
 }
 
 @font-face {
-    src: url(../fonts/Pacifico/Pacifico-Regular.ttf);
-    font-family: customFont2;
+    font-family: 'Space Mono';
+    src: url(../fonts/Space_Mono/SpaceMono-Regular.ttf);
+}
+
+@font-face {
+    font-family: Mulish;
+    src: url(../fonts/Mulish/Mulish-Regular.ttf);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Mono';
+}
+
+p {
+    font-family: Mulish;
+}
+
+th {
+    font-family: Mulish;
+}
+
+td {
+    font-family: Mulish;
 }
 
 #front-page {
@@ -21,12 +42,13 @@
 }
 
 header h1 {
-    font-family: customFont1;
+    font-family: 'Space Mono';
+    font-weight: bolder;
     color: white;
 }
 
 header h2 {
-    font-family: customFont2;
+    font-family: Pacifico;
     color: white;
     padding-bottom: 30px;
     font-size: 100px;
