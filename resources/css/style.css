@@ -13,6 +13,10 @@
     src: url(../fonts/Mulish/Mulish-Regular.ttf);
 }
 
+body {
+    background-color: #f0f0e8;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Space Mono';
 }
@@ -29,7 +33,11 @@ td {
     font-family: Mulish;
 }
 
-#front-page {
+/* ------------------------------
+#HEADER
+------------------------------ */
+
+#header-container {
     width: 100%;
     height: 100vh;
     background: url(../images/carbon_fibre.png) top center;
@@ -60,10 +68,6 @@ header h2 {
     }
 }
 
-body {
-    background-color: #f0f0e8;
-}
-
 .divider {
     position: absolute;
     bottom: 0;
@@ -87,11 +91,15 @@ body {
 
 /** For mobile devices **/
 @media (max-width: 767px) {
-    .custom-shape-divider-bottom-1647785958 svg {
+    .divider svg {
         width: calc(127% + 1.3px);
         height: 46px;
     }
 }
+
+/* ------------------------------
+#SECTION
+------------------------------ */
 
 .box {
     margin: 25px 0;
@@ -101,20 +109,53 @@ body {
     background-color: white;
 }
 
-
 #section1 .box {
     padding: 0 6px;
 }
-
 
 #section2 .box {
     padding: 0 6px;
 }
 
 #setup-box {
-    margin: 86px 0;
+    margin: 11.7% 0;
 }
 
 #tracking-box {
-    margin: 54px 0;
+    margin: 8.5% 0;
 }
+
+@media (max-width: 1200px) {
+    #setup-box {
+        margin: 8.7% 0;
+    }
+
+    #tracking-box {
+        margin: 25% 0;
+    }
+}
+
+@media (max-width: 991px) {
+    #setup-box {
+        margin: 15.5% 0;
+    }
+
+    #tracking-box {
+        margin: 7.5% 0;
+    }
+}
+
+@media (max-width: 767px) {
+    #setup-box {
+        margin: 0;
+    }
+
+    #tracking-box {
+        margin: 0;
+    }
+
+    .box {
+        margin: 10px 0;
+    }
+}
+
