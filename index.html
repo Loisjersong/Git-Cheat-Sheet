@@ -6,6 +6,8 @@
 
     <!--Boostrap CSS-->
     <link rel="stylesheet" type="text/css" href="resources/bootstrap/css/bootstrap.min.css">
+    <!--Animate on Scroll CSS-->
+    <link rel="stylesheet" type="text/css" href="resources/aos/aos.css">
 
     <!--Main CSS-->
     <link rel="stylesheet" type="text/css" href="resources/css/style.css">
@@ -17,7 +19,7 @@
     <header id="header-container">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 ">
+                <div class="col-md-12" data-aos="zoom-in">
                     <h1>GitHub</h1>
                     <h2>Git Cheat Sheet</h2>
                 </div>
@@ -34,7 +36,7 @@
     <section class="container" id="section1">
         <div class="row">
             <div class="col-md-6 col-sm-12">
-                <div class="box">
+                <div class="box" data-aos="flip-left">
                     <h3>INSTALLATION & GUIS</h3>
                     <p>With platform specific installers for Git, GitHub also provides the 
                         ease of staying up-to-date with the latest releases of the command 
@@ -50,7 +52,7 @@
                     </p>
                 </div>
 
-                <div class="box" id="setup-box">
+                <div class="box" id="setup-box" data-aos="flip-left">
                     <h3>SETUP</h3>
                     <p>Configuring user information used across all local repositories</p>
                     <table class="table table-striped">
@@ -63,7 +65,7 @@
                     </table>
                 </div>
 
-                <div class="box">
+                <div class="box" data-aos="flip-left">
                     <h3>SETUP & INIT</h3>
                     <p>Configuring user information, initializing and cloning repositories</p>
                     <table class="table table-striped">
@@ -80,7 +82,7 @@
                 <div class="row">
                     <div class="col">
 
-                        <div class="box">
+                        <div class="box" data-aos="flip-left">
                             <h3>STAGE & SNAPSHOT</h3>
                             <p>Working with snapshots and the Git staging area</p>
                             <table class="table table-striped">
@@ -100,7 +102,7 @@
                         </div>
                         
     
-                        <div class="box">
+                        <div class="box" data-aos="flip-left">
                             <h3>BRANCH & MERGE</h3>
                             <p>Isolating work in branches, changing context, and integrating changes</p>
                             <table class="table table-striped">
@@ -127,7 +129,7 @@
         <div class="row">
             <div class="col-md-6 col-sm-12">
 
-                <div class="box">
+                <div class="box" data-aos="flip-left">
                     <h3>INSPECT & COMPARE</h3>
                     <p>Examining logs, diffs and object information</p>
                     <table class="table table-striped">
@@ -144,7 +146,7 @@
                     </table>
                 </div>
 
-                <div class="box" id="tracking-box">
+                <div class="box" id="tracking-box" data-aos="flip-left">
                     <h3>TRACKING PATH CHANGES</h3>
                     <p>Versioning file removes and path changes</p>
                     <table class="table table-striped">
@@ -157,7 +159,7 @@
                     </table>
                 </div>
 
-                <div class="box">
+                <div class="box" data-aos="flip-left">
                     <h3>IGNORING PATTERNS</h3>
                     <p>Preventing unintentional staging or commiting of files</p>
                     <table class="table table-striped">
@@ -176,7 +178,7 @@
                 <div class="row">
                     <div class="col">
 
-                        <div class="box">
+                        <div class="box" data-aos="flip-left">
                             <h3>SHARE & UPDATE</h3>
                             <p>Retrieving updates from another repository and updating local repos</p>
                             <table class="table table-striped">
@@ -193,7 +195,7 @@
                             </table>
                         </div>
     
-                        <div class="box">
+                        <div class="box" data-aos="flip-left">
                             <h3>REWRITE HISTORY</h3>
                             <p>Rewriting branches, updating commits and clearing history</p>
                             <table class="table table-striped">
@@ -204,7 +206,7 @@
                             </table>
                         </div>
     
-                        <div class="box">
+                        <div class="box" data-aos="flip-left">
                             <h3>TEMPORARY COMMITS</h3>
                             <p>Temporarily store modified, tracked files in order to change branches</p>
                             <table class="table table-striped">
@@ -224,5 +226,8 @@
             </div>
         </div>
     </section>
+
+    <script src="resources/aos/aos.js"></script>
+    <script src="resources/js/main.js"></script>
 </body>
 </html>
